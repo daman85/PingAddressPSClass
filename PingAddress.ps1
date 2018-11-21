@@ -26,11 +26,12 @@ class Firewall {
     }
 
     ping(){
-        $secpasswd = ConvertTo-SecureString "Dcz4848!$" -AsPlainText -Force
-        $mycreds = New-Object System.Management.Automation.PSCredential ("damian@48first.com", $secpasswd)
-        $from = "Damian  <damian@48first.com>"
-        $to = "Help <damian@48first.com>"
-        $smtp = "mail.48first.com"
+	#Email credentials
+        $secpasswd = ConvertTo-SecureString "<password>" -AsPlainText -Force
+        $mycreds = New-Object System.Management.Automation.PSCredential ("<email>", $secpasswd)
+        $from = "<email>"
+        $to = "<email>"
+        $smtp = "<server>"
 
         
         DO{
